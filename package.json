@@ -2,7 +2,7 @@
   "name": "spelling-corrector",
   "version": "1.0.0",
   "description": "nodeJs Spelling Corrector version for Norvig's spelling corrector.",
-  "main": "index.js",
+  "main": "spellCorrector.js",
   "scripts": {
     "test": "make test"
   },
