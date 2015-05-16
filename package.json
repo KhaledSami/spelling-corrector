@@ -17,7 +17,9 @@
   ],
   "author": "Khaled Sami <k.sami.mohammed@gmail.com>",
   "dependencies": {
-    "hashmap": "2.0.3"
+    "hashmap": "2.0.3",
+    "blanket": "1.x.x",
+    "mocha": "2.x.x"
   },
   "license": "MIT",
   "bugs": {
