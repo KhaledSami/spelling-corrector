@@ -36,4 +36,29 @@ suite("Spell Corrector", function() {
         assert.equal(editWords.indexOf("axyz"), -1);
         assert.equal(editWords.indexOf("xy1"), -1);
     });
+
+    test("correct function should return the correction for the passed word", function() {
+        spellCorrector.loadDict();
+        this.timeout(40000);
+        var set1 = {
+            'access': 'acess',
+            'accommodation': 'accomodation',
+            'forbidden': 'forbiden',
+            'decisions': 'deciscions',
+            'decisions': 'descisions',
+            'supposedly': 'supposidly',
+            'cart': 'catt',
+            'address':'addres',
+            'member':'rember'
+        }
+        for (var key in set1) {
+            if (set1.hasOwnProperty(key)) {
+                var expected = key;
+                var bad = set1[key];
+                var correctedWord = spellCorrector.correct(bad);
+                assert.equal(correctedWord, expected);
+            }
+        }
+    });
+
 });
