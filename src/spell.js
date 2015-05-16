@@ -27,7 +27,7 @@ spellCorrector.prototype.getEdits = function(word) {
     for (var i = 0; i < word.length - 1; i++) result.push(word.slice(0, i) + word.slice(i + 1, i + 2) + word.slice(i, i + 1) + word.slice(i + 2));
     for (var i = 0; i < word.length; i++)
         for (var j = 0; j < this.alphabet.length; j++) result.push(word.slice(0, i) + this.alphabet[j] + word.slice(i + 1));
-    for (var i = 0; i < word.length; i++)
+    for (var i = 0; i <= word.length; i++)
         for (var j = 0; j < this.alphabet.length; j++) result.push(word.slice(0, i) + this.alphabet[j] + word.slice(i));
     return result;
 }

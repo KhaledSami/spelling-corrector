@@ -18,4 +18,22 @@ suite("Spell Corrector", function() {
         var nWords = spellCorrector.nWords;
         assert.equal(nWords.get("the"), 2);
     });
+
+    test("getEdits function should generate all possible correction strings from a passed word", function() {
+        var expectedNumberOfCombination = function(n) {
+            return 54 * n + 25;
+        }
+        var editWords = spellCorrector.getEdits("xy");
+        assert.equal(editWords.length, expectedNumberOfCombination(2));
+
+        editWords = spellCorrector.getEdits("aaa");
+        assert.equal(editWords.length, expectedNumberOfCombination(3));
+
+    });
+    test("getEdits function should not generate invalid correction strings from a passed word", function() {
+        var editWords = spellCorrector.getEdits("xy");
+        assert.notEqual(editWords.indexOf("xyz"), -1);
+        assert.equal(editWords.indexOf("axyz"), -1);
+        assert.equal(editWords.indexOf("xy1"), -1);
+    });
 });
