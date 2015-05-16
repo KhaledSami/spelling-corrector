@@ -16,6 +16,9 @@
     "Norvig-spelling-corrector"
   ],
   "author": "Khaled Sami <k.sami.mohammed@gmail.com>",
+  "dependencies": {
+    "hashmap": "2.0.3"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/KhaledSami/spelling-corrector/issues"
