@@ -19,7 +19,8 @@
   "dependencies": {
     "hashmap": "2.0.3",
     "blanket": "1.x.x",
-    "mocha": "2.x.x"
+    "mocha": "2.x.x",
+    "fs" : "x.x.x"
   },
   "license": "MIT",
   "bugs": {
