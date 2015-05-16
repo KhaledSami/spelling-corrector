@@ -2,10 +2,14 @@
 # spelling-corrector
 nodeJs Spelling Corrector version for Norvig's spelling corrector
 
-# How to use it
+# How to install
+
+npm i spelling-corrector
+
+# How to use 
 ```javascript
 
-var SpellCorrector = require('./spellCorrector.js');
+var SpellCorrector = require('spelling-corrector');
 
 var spellCorrector = new SpellCorrector();
 
