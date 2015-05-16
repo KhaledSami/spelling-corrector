@@ -6,8 +6,8 @@ var spellCorrector = function() {
     this.alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 }
 
-spellCorrector.prototype.loadDict = function(dictPath) {
-    dictPath = dictPath || './dictionary/big.txt';
+spellCorrector.prototype.loadDictionary = function(dictPath) {
+    dictPath = dictPath || __dirname + '/big.txt';
     var file = fs.readFileSync(dictPath).toString().toLowerCase();
     var regex = /[a-z]+/g;
     var match, word;

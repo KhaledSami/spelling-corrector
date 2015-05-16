@@ -13,10 +13,11 @@ suite("Spell Corrector", function() {
         assert.equal(spellCorrector.nWords.count(), 0);
     });
 
-    test("loadDict function should construct a hashmap from the passed dictionary", function() {
-        spellCorrector.loadDict('./dictionary/small.txt');
+    test("loadDictionary function should construct a hashmap from the passed dictionary", function() {
+    	this.timeout(40000);
+        spellCorrector.loadDictionary();
         var nWords = spellCorrector.nWords;
-        assert.equal(nWords.get("the"), 2);
+        assert.equal(nWords.get("the"), 80030);
     });
 
     test("getEdits function should generate all possible correction strings from a passed word", function() {
@@ -38,7 +39,7 @@ suite("Spell Corrector", function() {
     });
 
     test("correct function should return the correction for the passed word", function() {
-        spellCorrector.loadDict();
+        spellCorrector.loadDictionary();
         this.timeout(40000);
         var set1 = {
             'access': 'acess',
